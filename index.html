@@ -1,1 +1,188 @@
-hi
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Funclave Inc. is building the future of football management games.">
+    <title>Funclave Inc.</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --content-width: 880px;
+        --text: #151922;
+        --muted: #29313d;
+        --page: #ffffff;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--page);
+        color: var(--text);
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 1.45;
+      }
+
+      .hero {
+        width: 100%;
+        height: clamp(190px, 26vw, 330px);
+        overflow: hidden;
+        background: #d7eaf3;
+      }
+
+      .hero img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center 70%;
+      }
+
+      main {
+        width: min(var(--content-width), calc(100% - 40px));
+        margin: 0 auto;
+        padding: 0 0 52px;
+      }
+
+      .brand-header {
+        position: relative;
+        padding-top: 54px;
+      }
+
+      .ball-mark {
+        position: absolute;
+        top: -42px;
+        left: 0;
+        width: clamp(70px, 9vw, 92px);
+        height: clamp(70px, 9vw, 92px);
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        font-size: clamp(52px, 7vw, 70px);
+        line-height: 1;
+      }
+
+      h1 {
+        margin: 0;
+        font-size: clamp(36px, 5vw, 52px);
+        line-height: 1.05;
+        font-weight: 700;
+        letter-spacing: 0;
+      }
+
+      .ci {
+        display: block;
+        width: min(240px, 52vw);
+        height: auto;
+        margin: clamp(36px, 6vw, 58px) auto 28px;
+      }
+
+      .video {
+        width: 100%;
+        max-width: 820px;
+        margin: 0 auto;
+        aspect-ratio: 16 / 9;
+        background: #000;
+      }
+
+      .video iframe {
+        display: block;
+        width: 100%;
+        height: 100%;
+        border: 0;
+      }
+
+      .copy {
+        max-width: 820px;
+        margin: clamp(52px, 7vw, 74px) auto 0;
+        font-size: 20px;
+      }
+
+      .copy h2 {
+        margin: 0 0 54px;
+        font-size: clamp(22px, 3vw, 26px);
+        line-height: 1.25;
+        font-weight: 700;
+        letter-spacing: 0;
+      }
+
+      .copy p {
+        margin: 0 0 22px;
+        color: var(--muted);
+      }
+
+      .copy p:last-child {
+        margin-bottom: 0;
+      }
+
+      @media (max-width: 640px) {
+        .hero {
+          height: 210px;
+        }
+
+        .hero img {
+          object-position: center bottom;
+        }
+
+        main {
+          width: min(100% - 28px, var(--content-width));
+          padding-bottom: 40px;
+        }
+
+        .brand-header {
+          padding-top: 42px;
+        }
+
+        .ball-mark {
+          top: -34px;
+        }
+
+        .ci {
+          margin-top: 34px;
+          margin-bottom: 22px;
+        }
+
+        .copy {
+          margin-top: 42px;
+          font-size: 16px;
+        }
+
+        .copy h2 {
+          margin-bottom: 34px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="hero" aria-label="Football field">
+      <img src="img/title.webp" alt="Football on a pitch">
+    </header>
+
+    <main>
+      <section class="brand-header" aria-labelledby="page-title">
+        <div class="ball-mark" aria-hidden="true">⚽</div>
+        <h1 id="page-title">Funclave Inc.</h1>
+      </section>
+
+      <img class="ci" src="img/ci.webp" alt="Funclave">
+
+      <div class="video">
+        <iframe
+          src="https://www.youtube.com/embed/0hOwXCRKIQY"
+          title="Football Maestro game introduce"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen></iframe>
+      </div>
+
+      <section class="copy" aria-label="About Funclave">
+        <h2>We're an ambitious game studio, building the future of football management games.</h2>
+        <p>We bring together a deep love of football, modern game design, and technology-driven creativity to create experiences for fans who think beyond the final score. Our goal is to make football management more intuitive, more immersive, and more emotionally connected - giving players the feeling of building a club, shaping a philosophy, and leading a team through every decision.</p>
+        <p>Inspired by the energy of global startups and powered by fast-moving creative culture, we're re-imagining what a football management game can be for the next generation of players.</p>
+      </section>
+    </main>
+  </body>
+</html>
