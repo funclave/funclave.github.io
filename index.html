@@ -43,24 +43,16 @@
         padding: 0 0 52px;
       }
 
-      .video {
+      .content-spacer {
         width: 100%;
         max-width: 820px;
         margin: 0 auto;
-        aspect-ratio: 16 / 9;
-        background: #000;
-      }
-
-      .video iframe {
-        display: block;
-        width: 100%;
-        height: 100%;
-        border: 0;
+        aspect-ratio: 16 / 3;
       }
 
       .copy {
         max-width: 820px;
-        margin: clamp(52px, 7vw, 74px) auto 0;
+        margin: 0 auto;
         font-size: 20px;
       }
 
@@ -88,7 +80,6 @@
         }
 
         .copy {
-          margin-top: 42px;
           font-size: 16px;
         }
 
@@ -104,14 +95,7 @@
     </header>
 
     <main>
-      <div class="video">
-        <iframe
-          src="https://www.youtube.com/embed/0hOwXCRKIQY"
-          title="Football Maestro game introduce"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          referrerpolicy="strict-origin-when-cross-origin"
-          allowfullscreen></iframe>
-      </div>
+      <div class="content-spacer" aria-hidden="true"></div>
 
       <section class="copy" aria-label="About Funclave">
         <h2>We're an ambitious game studio, building the future of football management games.</h2>
