@@ -1,0 +1,499 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="FunClave Privacy Policy and Terms of Service.">
+    <meta name="theme-color" content="#07172e">
+    <link rel="icon" href="img/fm-mini/app-icon.png" type="image/png">
+    <title>Privacy Policy &amp; Terms of Service | FunClave</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;0,900;1,800;1,900&family=Inter:wght@400;500;600;700;800&display=swap");
+
+      :root {
+        --blue: #0877e8;
+        --green: #b8f229;
+        --navy: #07172e;
+        --ink: #10233d;
+        --muted: #5f7085;
+        --line: #dbe5ef;
+        --page: clamp(22px, 5vw, 78px);
+        --max: 1180px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        background: #f4f9fd;
+        color: var(--ink);
+        font-family: "Inter", Arial, sans-serif;
+        font-size: 16px;
+        line-height: 1.72;
+      }
+
+      a {
+        color: inherit;
+      }
+
+      .site-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 80px;
+        padding: 12px var(--page);
+        background: var(--navy);
+        color: #fff;
+      }
+
+      .brand img {
+        display: block;
+        width: 112px;
+        filter: brightness(0) invert(1);
+      }
+
+      .back-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        font-family: "Barlow Condensed", sans-serif;
+        font-size: 15px;
+        font-weight: 800;
+        letter-spacing: 0.1em;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      .back-link::before {
+        color: var(--green);
+        content: "←";
+        font-size: 21px;
+      }
+
+      .policy-hero {
+        position: relative;
+        padding: clamp(78px, 9vw, 130px) var(--page);
+        overflow: hidden;
+        background: linear-gradient(125deg, #0063cc, #0796ef);
+        color: #fff;
+      }
+
+      .policy-hero::after {
+        position: absolute;
+        top: -210px;
+        right: -120px;
+        width: 520px;
+        height: 520px;
+        border: 100px solid rgba(184, 242, 41, 0.15);
+        border-radius: 50%;
+        content: "";
+      }
+
+      .policy-hero-inner {
+        position: relative;
+        z-index: 1;
+        max-width: var(--max);
+        margin: 0 auto;
+      }
+
+      .eyebrow {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin: 0 0 18px;
+        color: var(--green);
+        font-family: "Barlow Condensed", sans-serif;
+        font-size: 14px;
+        font-weight: 800;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+      }
+
+      .eyebrow::before {
+        width: 36px;
+        height: 4px;
+        content: "";
+        background: var(--green);
+      }
+
+      .policy-hero h1 {
+        max-width: 920px;
+        margin: 0 0 20px;
+        font-family: "Barlow Condensed", sans-serif;
+        font-size: clamp(56px, 8vw, 110px);
+        font-style: italic;
+        font-weight: 900;
+        line-height: 0.9;
+        letter-spacing: -0.035em;
+        text-transform: uppercase;
+      }
+
+      .policy-hero p:last-child {
+        margin: 0;
+        color: rgba(255, 255, 255, 0.76);
+        font-weight: 600;
+      }
+
+      .policy-layout {
+        display: grid;
+        grid-template-columns: 250px minmax(0, 1fr);
+        gap: clamp(42px, 8vw, 100px);
+        align-items: start;
+        max-width: var(--max);
+        margin: 0 auto;
+        padding: clamp(72px, 9vw, 120px) var(--page);
+      }
+
+      .policy-nav {
+        position: sticky;
+        top: 30px;
+        padding: 25px;
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        background: #fff;
+        box-shadow: 0 15px 35px rgba(18, 62, 103, 0.08);
+      }
+
+      .policy-nav strong {
+        display: block;
+        margin-bottom: 13px;
+        color: var(--blue);
+        font-family: "Barlow Condensed", sans-serif;
+        font-size: 14px;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .policy-nav a {
+        display: block;
+        padding: 9px 0;
+        border-top: 1px solid var(--line);
+        color: var(--muted);
+        font-size: 14px;
+        font-weight: 600;
+        text-decoration: none;
+      }
+
+      .policy-nav a:hover,
+      .policy-nav a:focus-visible {
+        color: var(--blue);
+      }
+
+      .policy-document {
+        padding: clamp(28px, 5vw, 62px);
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        background: #fff;
+        box-shadow: 0 20px 50px rgba(18, 62, 103, 0.08);
+      }
+
+      .policy-document h2 {
+        margin: 0 0 26px;
+        padding-bottom: 19px;
+        border-bottom: 4px solid var(--green);
+        font-family: "Barlow Condensed", sans-serif;
+        font-size: clamp(38px, 5vw, 60px);
+        font-style: italic;
+        font-weight: 900;
+        line-height: 1;
+        letter-spacing: -0.02em;
+        text-transform: uppercase;
+      }
+
+      .policy-document h2:not(:first-child) {
+        margin-top: 76px;
+      }
+
+      .policy-document h3 {
+        margin: 38px 0 12px;
+        color: var(--blue);
+        font-family: "Barlow Condensed", sans-serif;
+        font-size: 25px;
+        font-weight: 800;
+        line-height: 1.2;
+        text-transform: uppercase;
+      }
+
+      .policy-document p {
+        margin: 12px 0;
+      }
+
+      .policy-document ul {
+        margin: 10px 0 22px;
+        padding-left: 24px;
+      }
+
+      .policy-document li {
+        margin: 8px 0;
+      }
+
+      .policy-document a {
+        color: var(--blue);
+        font-weight: 700;
+      }
+
+      .policy-note {
+        padding: 18px 20px;
+        border-left: 5px solid var(--green);
+        background: #f0f8e0;
+      }
+
+      .effective-date {
+        display: inline-block;
+        margin-top: 25px !important;
+        padding: 12px 17px;
+        border-radius: 6px;
+        background: var(--navy);
+        color: #fff;
+      }
+
+      .legal-footer {
+        padding: 38px var(--page) 32px;
+        background: #050f20;
+        color: #76889f;
+        font-size: 13px;
+      }
+
+      .footer-inner {
+        max-width: var(--max);
+        margin: 0 auto;
+      }
+
+      .footer-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px 0;
+        margin: 0 0 27px;
+        padding: 0;
+        list-style: none;
+      }
+
+      .footer-links li {
+        display: flex;
+        align-items: center;
+      }
+
+      .footer-links li:not(:last-child)::after {
+        width: 1px;
+        height: 12px;
+        margin: 0 15px;
+        content: "";
+        background: #344357;
+      }
+
+      .footer-links a {
+        color: #c6d1de;
+        font-weight: 600;
+        text-decoration: none;
+      }
+
+      .company-info {
+        margin-bottom: 23px;
+        font-style: normal;
+        line-height: 1.75;
+      }
+
+      .company-info p {
+        margin: 0;
+      }
+
+      .company-info a {
+        color: #96a8bc;
+      }
+
+      .footer-bottom {
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+        gap: 30px;
+        padding-top: 24px;
+        border-top: 1px solid #253449;
+      }
+
+      .footer-bottom img {
+        width: 96px;
+        filter: brightness(0) invert(1);
+        opacity: 0.9;
+      }
+
+      .footer-bottom p {
+        margin: 0;
+      }
+
+      @media (max-width: 800px) {
+        .policy-layout {
+          grid-template-columns: 1fr;
+        }
+
+        .policy-nav {
+          position: static;
+        }
+      }
+
+      @media (max-width: 560px) {
+        .site-header {
+          min-height: 70px;
+        }
+
+        .brand img {
+          width: 98px;
+        }
+
+        .back-link {
+          font-size: 13px;
+        }
+
+        .policy-layout {
+          padding-right: 18px;
+          padding-left: 18px;
+        }
+
+        .policy-document {
+          padding: 25px 20px;
+        }
+
+        .footer-bottom {
+          align-items: flex-start;
+          flex-direction: column;
+        }
+
+        .footer-links li:not(:last-child)::after {
+          margin: 0 9px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="FunClave home">
+        <img src="img/ci-transparent.png" alt="FunClave">
+      </a>
+      <a class="back-link" href="index.html">Back to Football Maestro Mini</a>
+    </header>
+
+    <main>
+      <section class="policy-hero">
+        <div class="policy-hero-inner">
+          <p class="eyebrow">Legal &amp; Privacy</p>
+          <h1>Privacy Policy &amp;<br>Terms of Service</h1>
+          <p>Effective April 30, 2026</p>
+        </div>
+      </section>
+
+      <div class="policy-layout">
+        <nav class="policy-nav" aria-label="Policy sections">
+          <strong>On this page</strong>
+          <a href="#privacy">1. Privacy Policy</a>
+          <a href="#collection">Collection and Use</a>
+          <a href="#third-party">Third-Party Services</a>
+          <a href="#retention">Data Retention</a>
+          <a href="#minors">Protection of Minors</a>
+          <a href="#terms">2. Terms of Service</a>
+        </nav>
+
+        <article class="policy-document">
+          <h2 id="privacy">1. Privacy Policy</h2>
+          <p><strong>Funclave ("we," "our," or "the Company")</strong> is committed to protecting your privacy. This Privacy Policy outlines how we collect, use, retain, and destroy your information.</p>
+
+          <h3 id="collection">Collection and Use of Information</h3>
+          <p>The Company collects only the minimum amount of information necessary to provide, optimize, and support our services.</p>
+          <ul>
+            <li><strong>Automatically Collected Data:</strong> IP address, Device Advertising ID (ADID/IDFA), device model, operating system (OS) version, access logs, and service usage patterns (used for service optimization and quality improvement).</li>
+            <li><strong>User-Provided Data:</strong> Email address (collected solely for customer support, inquiries, and dispute resolution).</li>
+          </ul>
+
+          <h3 id="third-party">Third-Party Services and SDKs</h3>
+          <p>To enhance service quality and provide advanced features, we integrate third-party SDKs into our services. These providers may collect and process data in accordance with their own privacy policies.</p>
+
+          <h3>1. Advertising (Ads)</h3>
+          <ul>
+            <li><strong>AdMob, Unity Ads, AppLovin:</strong> Used to display personalized or general advertisements within the app.</li>
+          </ul>
+
+          <h3>2. Analytics</h3>
+          <ul>
+            <li><strong>Google Analytics for Firebase, Unity Analytics:</strong> Used to analyze user behavior, monitor app performance, and improve service quality.</li>
+          </ul>
+
+          <h3>3. Authentication &amp; Game Services</h3>
+          <ul>
+            <li><strong>Google Play Games Services, Apple ID:</strong> Used for user authentication, cloud data storage, leaderboards, and achievement tracking.</li>
+          </ul>
+
+          <p class="policy-note"><em>💡 For detailed information on how these third-party providers process your data, please refer to the official privacy policy pages of the respective companies.</em></p>
+
+          <h3 id="retention">Data Retention, Destruction, and Right to Request Deletion (Google Play Policy Compliance)</h3>
+          <ul>
+            <li><strong>Destruction Procedure:</strong> Personal information is destroyed without delay once the purpose of its collection and use has been achieved. Data stored in electronic file formats is permanently deleted using technical methods that prevent record recovery.</li>
+            <li><strong>Right to Request Data Deletion (Account Deletion):</strong> Users have the right to request the deletion of their personal information and the termination of their account at any time. If you wish to delete your data, please contact our customer support via email at <a href="mailto:cs@funclave.net">cs@funclave.net</a>. Upon verification, we will permanently and safely destroy your data without delay.</li>
+          </ul>
+
+          <h3 id="minors">Protection of Minors (Children)</h3>
+          <p>We do not knowingly collect personal information from children under the age of 14 (or the minimum age required by local law). If we discover that personal information of a child under 14 has been inadvertently collected, we will take immediate measures to permanently delete such data from our systems.</p>
+
+          <h3>Privacy Officer and Contact Information</h3>
+          <p>For any inquiries or complaints regarding your privacy while using our services, please contact our dedicated support team:</p>
+          <ul>
+            <li><strong>Department:</strong> Funclave Service Team</li>
+            <li><strong>Email:</strong> <a href="mailto:cs@funclave.net">cs@funclave.net</a></li>
+          </ul>
+
+          <h2 id="terms">2. Terms of Service</h2>
+
+          <h3>Article 1 (Use of Service and Restrictions)</h3>
+          <ul>
+            <li>Users are strictly prohibited from copying, modifying, reverse engineering, decompiling, or attempting to extract the source code of the application without the prior written consent of the Company.</li>
+            <li>The service must be used in a standard operating system environment. The Company shall not be held liable for any system errors, security issues, or disadvantages arising from unauthorized device modifications (e.g., rooting, jailbreaking).</li>
+          </ul>
+
+          <h3>Article 2 (In-App Purchases and Subscription Cancellation/Refunds)</h3>
+          <ul>
+            <li><strong>7-Day Refund Policy:</strong> Users may request a cancellation of purchase and a refund for purchased paid content within seven (7) days from the date of purchase.</li>
+            <li><strong>Refund Restrictions:</strong> In accordance with applicable laws and regulations, refunds may be restricted for certain contents, such as consumable items that are used or applied immediately upon purchase.</li>
+            <li><strong>Refund Procedure:</strong> Refunds for in-app purchases are processed in accordance with applicable laws and the policies of the respective app stores. Requests can be submitted through the customer support of the respective store (Google Play Store or Apple App Store) as well as the Company’s customer support center (<a href="mailto:cs@funclave.net">cs@funclave.net</a>).</li>
+          </ul>
+
+          <h3>Article 3 (Limitation of Liability)</h3>
+          <p>The Company shall not be held liable for any damages caused by force majeure, natural disasters, unpredictable network instability, device battery depletion, or the user's negligence in managing their own device.</p>
+
+          <h3>Article 4 (Governing Law and Inquiries)</h3>
+          <p>Matters not specified in these Terms shall be governed by relevant laws, regulations, and commercial practices. For any inquiries regarding these Terms, please contact us at:</p>
+          <ul>
+            <li><strong>Contact:</strong> <a href="mailto:cs@funclave.net">cs@funclave.net</a></li>
+          </ul>
+
+          <p class="effective-date"><strong>Effective Date:</strong> April 30, 2026</p>
+        </article>
+      </div>
+    </main>
+
+    <footer class="legal-footer">
+      <div class="footer-inner">
+        <nav aria-label="Footer navigation">
+          <ul class="footer-links">
+            <li><a href="index.html">Football Maestro Mini</a></li>
+            <li><a href="https://play.google.com/store/apps/details?id=com.funclave.fm2mini&amp;hl=ko" target="_blank" rel="noopener noreferrer">Google Play</a></li>
+            <li><a href="mailto:cs@funclave.net">Customer Support</a></li>
+          </ul>
+        </nav>
+
+        <address class="company-info">
+          <p>FunClave Inc. | Business Registration No. 625-87-03433</p>
+          <p>Address: Rm #2, 1215-ho, Terra Tower B, 201 Songpa-daero, Songpa-gu, Seoul, Republic of Korea</p>
+          <p>Customer Support: <a href="mailto:cs@funclave.net">cs@funclave.net</a></p>
+        </address>
+
+        <div class="footer-bottom">
+          <img src="img/ci-transparent.png" alt="FunClave">
+          <p>© 2026 FunClave Inc. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
