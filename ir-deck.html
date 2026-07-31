@@ -227,7 +227,7 @@
         <h3 class="text-2xl font-extrabold section-title text-white">2. 풋볼 마에스트로 II 시장 포지셔닝 및 경쟁력 (vs Top Eleven)</h3>
         <p class="text-slate-300 mb-8 leading-relaxed text-sm md:text-base">
             현재 글로벌 모바일 축구 매니지먼트 시장의 1위는 연 매출 1,420억 원($105M)을 기록 중인 <span class="gold-text">Top Eleven (Nordeus / Take-Two)</span>입니다. 
-            <span class="indigo-text">풋볼 마에스트로 II</span>는 기존 Top Eleven의 텍스트/2D 중심 경기와 정적인 운영 구조를 탈피하여, <span class="emerald-text">캐주얼 3D 비주얼 + 스토리 기반 클럽 육성 + FM급 실시간 PVP 전술 대결</span>로 시장을 선점합니다.
+            <span class="indigo-text">풋볼 마에스트로 II</span>는 기존 Top Eleven의 어색한 경기시뮬레이션와 정적인 운영 구조를 탈피하여, <span class="emerald-text">캐주얼 3D 비주얼 + 스토리 기반 클럽 육성 + FM급 실시간 PVP 전술 대결</span>로 시장을 주도합니다.
         </p>
 
         <!-- Positioning Comparison Grid -->
@@ -269,10 +269,6 @@
 
             <!-- Football Maestro II -->
             <div class="card p-6 border-indigo-500/50 bg-indigo-950/30 relative overflow-hidden">
-                <div class="absolute -top-3 right-6 bg-gradient-to-r from-indigo-500 to-purple-600 text-white text-[11px] font-extrabold px-3 py-1 rounded-full shadow-md">
-                    FUNCLAVE INNOVATION
-                </div>
-
                 <div class="flex flex-wrap justify-between items-start border-b border-indigo-800/60 pb-4 mb-4 gap-2">
                     <div>
                         <span class="text-xs text-indigo-400 uppercase tracking-wider font-bold">차세대 카테고리 킬러</span>
@@ -527,16 +523,16 @@
         <!-- Corrected Resource Links Grid -->
         <div class="flex flex-wrap justify-center gap-3 text-xs font-semibold">
             <a href="https://youtu.be/0hOwXCRKIQY" target="_blank" class="bg-slate-800 hover:bg-slate-700 text-indigo-300 py-2.5 px-4 rounded-xl border border-slate-700 transition flex items-center gap-2">
-                🎬 게임 플레이 스타일 영상
+                🎬 게임스타일 영상
             </a>
             <a href="https://youtu.be/6oPUz0rW6tM" target="_blank" class="bg-slate-800 hover:bg-slate-700 text-indigo-300 py-2.5 px-4 rounded-xl border border-slate-700 transition flex items-center gap-2">
-                ⚽ 경기장 & 경기 연출 영상
+                ⚽ 경기장&경기연출 영상
             </a>
             <a href="https://www.figma.com/design/mWYxmnIbJECbeAzYatkTfh/FM2-Preview?node-id=0-1&p=f" target="_blank" class="bg-slate-800 hover:bg-slate-700 text-indigo-300 py-2.5 px-4 rounded-xl border border-slate-700 transition flex items-center gap-2">
                 🎨 Figma UI 프리뷰
             </a>
             <a href="https://drive.google.com/file/d/1d30HhrdIsAf-MHuAKy_5S-nr1QdAG3AG/view?usp=sharing" target="_blank" class="bg-slate-800 hover:bg-slate-700 text-indigo-300 py-2.5 px-4 rounded-xl border border-slate-700 transition flex items-center gap-2">
-                📖 스토리 기획 자료
+                📖 스토리 예시
             </a>
             <a href="mailto:biz@funclave.net" class="bg-indigo-600 hover:bg-indigo-500 text-white py-2.5 px-6 rounded-xl shadow-lg transition flex items-center gap-2">
                 ✉️ IR 미팅 및 제안 문의 (biz@funclave.net)
@@ -569,7 +565,7 @@
         const monthlyTotalKrw = monthlyIapKrw + monthlyIaaKrw;
         const annualTotalKrw = monthlyTotalKrw * 12;
 
-        document.getElementById('outPayingUsers').textContent = (payingUsers / 10000).toFixed(1) + '백만 명';
+        document.getElementById('outPayingUsers').textContent = (payingUsers / 10000).toFixed(1) + '만 명';
         document.getElementById('outMonthlyIap').textContent = (monthlyIapKrw / 100000000).toFixed(1) + '억 원';
         document.getElementById('outMonthlyIaa').textContent = (monthlyIaaKrw / 100000000).toFixed(1) + '억 원';
         document.getElementById('outMonthlyTotal').textContent = (monthlyTotalKrw / 100000000).toFixed(1) + '억 원';
