@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Football Maestro II - Executive IR Pitch & Football Market Infographic</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0b0f19;
+            color: #f8fafc;
+        }
+
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 310px;
+        }
+
+        .card {
+            background: #131c2e;
+            border: 1px solid #1e293b;
+            border-radius: 1.25rem;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4);
+            transition: all 0.25s ease-in-out;
+        }
+
+        .card:hover {
+            border-color: #6366f1;
+            box-shadow: 0 15px 30px -5px rgba(99, 102, 241, 0.15);
+        }
+
+        .ir-gradient {
+            background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 40%, #312e81 100%);
+        }
+
+        .accent-gradient {
+            background: linear-gradient(135deg, #3b82f6 0%, #6366f1 50%, #8b5cf6 100%);
+        }
+
+        .gold-text {
+            color: #fbbf24;
+            font-weight: 700;
+        }
+
+        .emerald-text {
+            color: #34d399;
+            font-weight: 700;
+        }
+
+        .indigo-text {
+            color: #818cf8;
+            font-weight: 700;
+        }
+
+        .rose-text {
+            color: #f43f5e;
+            font-weight: 700;
+        }
+
+        .section-title {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 1.5rem;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: linear-gradient(90deg, #6366f1, #3b82f6);
+            border-radius: 2px;
+        }
+
+        /* Custom Range Slider Styling */
+        input[type=range] {
+            accent-color: #6366f1;
+        }
+    </style>
+</head>
+<body class="p-3 md:p-8 lg:p-10">
+
+<div class="max-w-7xl mx-auto space-y-12">
+    <!-- HERO IR HEADER -->
+    <header class="card ir-gradient p-6 md:p-10 relative overflow-hidden border border-indigo-900/50 shadow-2xl">
+        <div class="absolute right-0 top-0 bottom-0 opacity-10 pointer-events-none flex items-center pr-8">
+            <span class="text-[180px] font-black text-indigo-400 select-none">FM II</span>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
+            <!-- Left Info Block -->
+            <div class="lg:col-span-8 space-y-6">
+                <div class="flex flex-wrap items-center gap-3">
+                    <span class="bg-indigo-600 text-white font-extrabold text-xs px-3 py-1.5 rounded-lg uppercase tracking-wider">FUNCLAVE INC.</span>
+                    <span class="text-slate-400 text-xs tracking-wide">EXECUTIVE INVESTMENT PROPOSAL</span>
+                    <span class="inline-flex items-center gap-1.5 text-xs text-emerald-400 bg-emerald-950/80 px-3 py-1 rounded-full border border-emerald-800">
+                        <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span> IR Pitch Deck
+                    </span>
+                </div>
+
+                <div class="space-y-4">
+                    <!-- Title Logo Image & Text -->
+                    <div class="flex items-center gap-4 flex-wrap">
+                        <img src="input_file_2.png" alt="Football Maestro II Logo" class="h-14 md:h-20 object-contain drop-shadow-lg" onerror="this.style.display='none'">
+                        <div>
+                            <h1 class="text-3xl md:text-5xl font-black text-white tracking-tight leading-none">
+                                FOOTBALL MAESTRO II
+                            </h1>
+                            <p class="text-indigo-400 text-lg md:text-xl font-bold mt-1">(풋볼 마에스트로 II)</p>
+                        </div>
+                    </div>
+
+                    <p class="text-slate-300 text-base md:text-lg font-light leading-relaxed max-w-3xl">
+                        스토리 기반 클럽 육성 · FM급 실시간 PVP 전술 대결 · 직관적인 3D 캐주얼 UI가 결합된 <br class="hidden md:inline">
+                        <span class="indigo-text">차세대 글로벌 모바일 축구 매니지먼트 IR 피칭 제안서</span>
+                    </p>
+                </div>
+
+                <!-- Key Investment Pitch Metrics Grid -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-3 pt-2">
+                    <div class="bg-slate-900/90 p-3.5 rounded-xl border border-slate-800">
+                        <p class="text-[11px] text-slate-400 font-medium">타깃 모바일 시장</p>
+                        <p class="text-lg md:text-xl font-black text-indigo-400 mt-0.5">$2.6B (3.5조원)</p>
+                        <p class="text-[10px] text-indigo-300 mt-0.5">+9.4% 연평균 성장</p>
+                    </div>
+                    <div class="bg-slate-900/90 p-3.5 rounded-xl border border-slate-800">
+                        <p class="text-[11px] text-slate-400 font-medium">벤치마크 타깃</p>
+                        <p class="text-lg md:text-xl font-black text-amber-400 mt-0.5">Top Eleven</p>
+                        <p class="text-[10px] text-amber-300 mt-0.5">연 매출 1,420억 원</p>
+                    </div>
+                    <div class="bg-slate-900/90 p-3.5 rounded-xl border border-slate-800">
+                        <p class="text-[11px] text-slate-400 font-medium">목표 매출 (궤도 안착 시)</p>
+                        <p class="text-lg md:text-xl font-black text-emerald-400 mt-0.5">월 12억 ~ 90억</p>
+                        <p class="text-[10px] text-emerald-300 mt-0.5">연 240억 ~ 1,080억 원</p>
+                    </div>
+                    <div class="bg-slate-900/90 p-3.5 rounded-xl border border-slate-800">
+                        <p class="text-[11px] text-slate-400 font-medium">핵심 차별화</p>
+                        <p class="text-lg md:text-xl font-black text-purple-400 mt-0.5">3D 스토리+FM전술</p>
+                        <p class="text-[10px] text-purple-300 mt-0.5">카테고리 킬러 장르</p>
+                    </div>
+                </div>
+
+                <div class="flex flex-wrap items-center gap-3 pt-1">
+                    <a href="#simulator" class="bg-indigo-600 hover:bg-indigo-500 text-white font-semibold py-2.5 px-6 rounded-xl transition text-sm flex items-center gap-2 shadow-lg">
+                        📊 투자 수익률(ROI) 시뮬레이터 실행
+                    </a>
+                    <a href="#visuals" class="bg-slate-800 hover:bg-slate-700 text-indigo-300 font-semibold py-2.5 px-5 rounded-xl border border-slate-700 transition text-sm flex items-center gap-2">
+                        🎨 3D 캐릭터 & 비주얼 컨셉 보기
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right Hero Character Graphic -->
+            <div class="lg:col-span-4 flex justify-center">
+                <div class="relative group">
+                    <div class="absolute -inset-1 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-2xl blur opacity-30 group-hover:opacity-60 transition duration-500"></div>
+                    <img src="input_file_10.png" alt="Football Maestro II Manager" class="relative rounded-2xl shadow-2xl max-h-[340px] object-cover border border-indigo-500/30" onerror="this.onerror=null; this.src='input_file_1.png';">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- SECTION 1: GLOBAL FOOTBALL GAME MARKET OPPORTUNITY -->
+    <section>
+        <h3 class="text-2xl font-extrabold section-title text-white">1. 축구 게임 시장 규모 및 모바일 기회 (TAM / SAM / SOM)</h3>
+        <p class="text-slate-300 mb-8 leading-relaxed text-sm md:text-base">
+            전 세계 스포츠 비디오 게임 시장(약 40조 원) 중 축구 장르가 <span class="indigo-text">28.4%($8.0B / 약 12조 원)</span>로 절대적 1위를 지키고 있습니다. 
+            특히 <span class="rose-text">모바일 축구 게임 시장은 연 9.4% 성장하여 3.5조 원($2.6B)</span> 규모로 확대 중이며, 이 중 <span class="emerald-text">매니지먼트 장르(22% / 약 7,700억 원)</span>는 높은 잔존율(Retention)과 공고한 과금 유저층을 바탕으로 최고 효율의 사업성을 자랑합니다.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Platform Share -->
+            <div class="card p-6">
+                <h4 class="font-bold text-slate-200 text-xs uppercase tracking-wider mb-2">축구 게임 플랫폼 분포 ($8.0B)</h4>
+                <div class="chart-container">
+                    <canvas id="footballPlatformChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Mobile Genre Breakdown -->
+            <div class="card p-6">
+                <h4 class="font-bold text-slate-200 text-xs uppercase tracking-wider mb-2">모바일 축구 장르 세부 분포</h4>
+                <div class="chart-container">
+                    <canvas id="footballGenreChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Genre Comparison Info Card -->
+            <div class="card p-6 flex flex-col justify-between bg-slate-900/60">
+                <div class="space-y-4">
+                    <h4 class="font-bold text-indigo-400 text-sm">💡 왜 '모바일 매니저 장르'인가?</h4>
+                    
+                    <div class="bg-slate-800/80 p-3.5 rounded-xl border border-slate-700">
+                        <span class="text-xs font-bold text-indigo-300 block">액션 시뮬레이션 (63%)</span>
+                        <p class="text-xs text-slate-400 mt-1">EA FC Mobile, eFootball 중심. 고비용 3D 물리 엔진 및 선수 라이선스 비용 부담이 큼.</p>
+                    </div>
+
+                    <div class="bg-indigo-950/80 p-3.5 rounded-xl border border-indigo-500/50">
+                        <div class="flex justify-between items-center">
+                            <span class="text-xs font-bold text-emerald-400">★ 매니지먼트 장르 (22%)</span>
+                            <span class="text-[10px] bg-emerald-900/80 text-emerald-300 px-2 py-0.5 rounded font-bold">FM2 타깃</span>
+                        </div>
+                        <p class="text-xs text-slate-200 mt-1">FM, Top Eleven 중심. <span class="emerald-text">높은 잔존율(D30+)</span>, <span class="gold-text">높은 ARPPU($25~$45)</span>, 라이선스 의존도 낮음.</p>
+                    </div>
+
+                    <div class="bg-slate-800/80 p-3.5 rounded-xl border border-slate-700">
+                        <span class="text-xs font-bold text-amber-300 block">캐주얼 / 아케이드 (12%)</span>
+                        <p class="text-xs text-slate-400 mt-1">Score! Hero 등. 유저 유입량은 많으나 LTV가 낮아 인앱 광고(IAA)에 과도하게 의존.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: PRODUCT POSITIONING & COMPETITIVE ADVANTAGE -->
+    <section>
+        <h3 class="text-2xl font-extrabold section-title text-white">2. 풋볼 마에스트로 II 시장 포지셔닝 및 경쟁력 (vs Top Eleven)</h3>
+        <p class="text-slate-300 mb-8 leading-relaxed text-sm md:text-base">
+            현재 글로벌 모바일 축구 매니지먼트 시장의 1위는 연 매출 1,420억 원($105M)을 기록 중인 <span class="gold-text">Top Eleven (Nordeus / Take-Two)</span>입니다. 
+            <span class="indigo-text">풋볼 마에스트로 II</span>는 기존 Top Eleven의 텍스트/2D 중심 경기와 정적인 운영 구조를 탈피하여, <span class="emerald-text">캐주얼 3D 비주얼 + 스토리 기반 클럽 육성 + FM급 실시간 PVP 전술 대결</span>로 시장을 선점합니다.
+        </p>
+
+        <!-- Positioning Comparison Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <!-- Benchmark: Top Eleven -->
+            <div class="card p-6 border-slate-700 bg-slate-900/40 relative overflow-hidden">
+                <div class="flex flex-wrap justify-between items-start border-b border-slate-800 pb-4 mb-4 gap-2">
+                    <div>
+                        <span class="text-xs text-slate-400 uppercase tracking-wider font-bold">기존 시장 대표작 (Benchmark)</span>
+                        <h4 class="text-xl font-bold text-white mt-1">TOP ELEVEN (노르데우스)</h4>
+                    </div>
+                    <span class="text-amber-400 font-black text-lg bg-amber-950/60 px-3 py-1 rounded-lg border border-amber-800">$105M / 년</span>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+                    <div class="md:col-span-1">
+                        <img src="input_file_7.png" alt="Top Eleven Visual" class="rounded-xl object-cover w-full h-32 border border-slate-800" onerror="this.style.display='none'">
+                    </div>
+                    <ul class="md:col-span-2 space-y-2.5 text-xs text-slate-300">
+                        <li class="flex items-start gap-2">
+                            <span class="text-rose-400 font-bold">✕</span>
+                            <span><strong class="text-slate-100">그래픽 & 경기 연출:</strong> 2D 평면 및 텍스트 위주의 다소 건조한 중계</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-rose-400 font-bold">✕</span>
+                            <span><strong class="text-slate-100">경기 속도 & 주기:</strong> 정해진 시간에만 1일 1경기 진행되는 지루한 일정</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-rose-400 font-bold">✕</span>
+                            <span><strong class="text-slate-100">몰입 요소:</strong> 선수 육성 외 구단주/감독 스토리텔링 및 캐릭터 감성 부재</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-emerald-400 font-bold">✓</span>
+                            <span><strong class="text-slate-100">BM 강점:</strong> 경매(Bidding) 토큰 시스템 및 시즌 패스 ($25~$45 ARPPU)</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Football Maestro II -->
+            <div class="card p-6 border-indigo-500/50 bg-indigo-950/30 relative overflow-hidden">
+                <div class="absolute -top-3 right-6 bg-gradient-to-r from-indigo-500 to-purple-600 text-white text-[11px] font-extrabold px-3 py-1 rounded-full shadow-md">
+                    FUNCLAVE INNOVATION
+                </div>
+
+                <div class="flex flex-wrap justify-between items-start border-b border-indigo-800/60 pb-4 mb-4 gap-2">
+                    <div>
+                        <span class="text-xs text-indigo-400 uppercase tracking-wider font-bold">차세대 카테고리 킬러</span>
+                        <h4 class="text-xl font-bold text-indigo-300 mt-1">풋볼 마에스트로 II (FM2)</h4>
+                    </div>
+                    <span class="text-emerald-400 font-black text-lg bg-emerald-950/80 px-3 py-1 rounded-lg border border-emerald-800">목표 월 12억~90억</span>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div class="md:col-span-1">
+                        <img src="input_file_11.png" alt="Tactical Manager Ingame Visual" class="rounded-xl object-cover w-full h-36 border border-indigo-800 shadow-md" onerror="this.onerror=null; this.src='input_file_3.png';">
+                    </div>
+                    <ul class="md:col-span-2 space-y-2.5 text-xs text-slate-200">
+                        <li class="flex items-start gap-2">
+                            <span class="text-indigo-400 font-bold">★</span>
+                            <span><strong class="text-indigo-300">스토리 기반 클럽 육성:</strong> 캐릭터 중심 감독 이야기와 드라마틱 구단 재건</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-indigo-400 font-bold">★</span>
+                            <span><strong class="text-indigo-300">유니크한 3D 캐릭터:</strong> 캐주얼하면서도 생동감 넘치는 3D 실시간 경기 연출</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-indigo-400 font-bold">★</span>
+                            <span><strong class="text-indigo-300">FM급 실시간 PVP 전술:</strong> 실시간 전술 변경 및 포지셔닝 승부</span>
+                        </li>
+                        <li class="flex items-start gap-2">
+                            <span class="text-indigo-400 font-bold">★</span>
+                            <span><strong class="text-indigo-300">빠른 캐주얼 실시간 리그:</strong> 대기 시간 없이 원하는 만큼 연속 리그 진행</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: TOP TIER REVENUE BENCHMARKS & MONETIZATION -->
+    <section>
+        <h3 class="text-2xl font-extrabold section-title text-white">3. 글로벌 탑티어 성과 및 Top Eleven 결제 구조 세부 분석</h3>
+        <p class="text-slate-300 mb-8 leading-relaxed text-sm md:text-base">
+            2025년 기준 글로벌 축구 게임 타이틀별 추정 매출 데이터입니다. EA SPORTS FC가 대형 콘솔 및 모바일 시장을 주도하는 가운데, 노르데우스의 Top Eleven은 순수 매니지먼트 장르로서 <span class="gold-text">연간 약 1,420억 원($105M)</span>의 막대한 매출을 창출하고 있습니다.
+        </p>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+            <div class="card p-6">
+                <h4 class="text-xs font-bold text-indigo-400 uppercase tracking-wider mb-3">2025년 주요 축구 게임 타이틀별 매출 추정치 ($ Millions)</h4>
+                <div class="chart-container">
+                    <canvas id="footballRevenue2025Chart"></canvas>
+                </div>
+            </div>
+
+            <!-- Top Eleven Monetization Analysis Card -->
+            <div class="card p-6 bg-slate-900/80 border-amber-500/30 flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="text-3xl">💰</span>
+                        <div>
+                            <h4 class="text-lg font-bold text-amber-400">Top Eleven 과금 구조 (FM2 BM 벤치마킹)</h4>
+                            <p class="text-xs text-slate-400">Nordeus / Take-Two 지표 기반 모네타이제이션 상세 수치</p>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-3 mb-4">
+                        <div class="bg-slate-800 p-3.5 rounded-xl border border-slate-700">
+                            <span class="text-[11px] text-slate-400 uppercase font-semibold">결제 전환율 (Pay Rate)</span>
+                            <p class="text-xl font-black text-amber-300 mt-0.5">3.0% ~ 5.0%</p>
+                            <p class="text-[10px] text-slate-400 mt-0.5">F2P 미드코어 최상위 수준</p>
+                        </div>
+                        <div class="bg-slate-800 p-3.5 rounded-xl border border-slate-700">
+                            <span class="text-[11px] text-slate-400 uppercase font-semibold">월간 ARPPU</span>
+                            <p class="text-xl font-black text-emerald-400 mt-0.5">$25 ~ $45</p>
+                            <p class="text-[10px] text-slate-400 mt-0.5">약 35,000원 ~ 60,000원</p>
+                        </div>
+                    </div>
+
+                    <div class="space-y-2 text-xs text-slate-300">
+                        <div class="p-3 bg-slate-950/80 rounded-xl border border-slate-800">
+                            <span class="text-indigo-300 font-bold block mb-0.5">1. 실시간 토큰 경매 (Bidding Auction):</span>
+                            선수 영입 시 실시간 경매 경쟁을 유도하여 유무료 토큰 재화 소모를 극대화.
+                        </div>
+                        <div class="p-3 bg-slate-950/80 rounded-xl border border-slate-800">
+                            <span class="text-indigo-300 font-bold block mb-0.5">2. 스페셜 스폰서 패스 (Season Pass):</span>
+                            28일 주기 시즌 패스($5.99~$17.99)로 고정 리커링(Recurring) 매출 확보.
+                        </div>
+                        <div class="p-3 bg-slate-950/80 rounded-xl border border-slate-800">
+                            <span class="text-indigo-300 font-bold block mb-0.5">3. 하이브리드 광고 (IAA):</span>
+                            비과금 유저(95%)에 체력 포션 및 훈련 배수를 제공하여 광고 매출 병행.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: 3D ARTWORK & VISUAL CONCEPT SHOWCASE -->
+    <section id="visuals" class="card p-6 md:p-8 bg-slate-900/80 border-indigo-500/30">
+        <div class="flex items-center gap-3 mb-6">
+            <span class="bg-indigo-600 text-white p-2.5 rounded-xl text-xl">🎨</span>
+            <div>
+                <h3 class="text-2xl font-black text-white">실제 3D 캐주얼 캐릭터 & 인게임 비주얼 연출</h3>
+                <p class="text-xs md:text-sm text-slate-300">무겁고 차가운 실사 게임을 대체하는 유니크한 3D 아트워크와 실시간 인게임 경기 연출</p>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            <!-- Image 1: 3D Player Lineup (input_file_8.png) -->
+            <div class="bg-slate-950 p-3 rounded-2xl border border-slate-800 space-y-3 flex flex-col justify-between">
+                <div>
+                    <div class="overflow-hidden rounded-xl h-48 bg-slate-900 flex items-center justify-center">
+                        <img src="input_file_8.png" alt="3D Star Player Lineup" class="w-full h-full object-cover hover:scale-105 transition duration-300" onerror="this.onerror=null; this.src='input_file_6.png';">
+                    </div>
+                    <div class="p-1 mt-2">
+                        <span class="text-xs font-bold text-indigo-400 block">★ 글로벌 스타 3D 캐리커처</span>
+                        <p class="text-xs text-slate-400 mt-1 leading-relaxed">손흥민, 메시, 음바페, 홀란드 등 전 세계 탑클래스 선수를 독창적인 캐주얼 3D 비율로 디자인하여 친밀감 및 수집욕 자극.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Image 2: Stadium Broadcast View (input_file_9.png) -->
+            <div class="bg-slate-950 p-3 rounded-2xl border border-slate-800 space-y-3 flex flex-col justify-between">
+                <div>
+                    <div class="overflow-hidden rounded-xl h-48 bg-slate-900 flex items-center justify-center">
+                        <img src="input_file_9.png" alt="3D Stadium Wide Match View" class="w-full h-full object-cover hover:scale-105 transition duration-300" onerror="this.onerror=null; this.src='input_file_5.png';">
+                    </div>
+                    <div class="p-1 mt-2">
+                        <span class="text-xs font-bold text-emerald-400 block">★ 3D 필드 전경 & 관중 중계</span>
+                        <p class="text-xs text-slate-400 mt-1 leading-relaxed">풀 3D 스타디움과 관중 반응, 실시간 PVP 전술 변경에 따른 현장감 넘치는 경기 전경 중계 카메라 연출.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Image 3: Mobile Vertical Ingame Match (input_file_11.png) -->
+            <div class="bg-slate-950 p-3 rounded-2xl border border-slate-800 space-y-3 flex flex-col justify-between">
+                <div>
+                    <div class="overflow-hidden rounded-xl h-48 bg-slate-900 flex items-center justify-center">
+                        <img src="input_file_11.png" alt="Mobile Vertical Tactical Match" class="w-full h-full object-cover hover:scale-105 transition duration-300" onerror="this.onerror=null; this.src='input_file_3.png';">
+                    </div>
+                    <div class="p-1 mt-2">
+                        <span class="text-xs font-bold text-amber-400 block">★ 모바일 세로형 실시간 전술</span>
+                        <p class="text-xs text-slate-400 mt-1 leading-relaxed">모바일 세로 화면에 최적화된 실시간 3D 전술 패스/슛 연출로 직관적인 전술 관전 및 개입 경험 제공.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Image 4: Manager Character Branding (input_file_10.png) -->
+            <div class="bg-slate-950 p-3 rounded-2xl border border-slate-800 space-y-3 flex flex-col justify-between">
+                <div>
+                    <div class="overflow-hidden rounded-xl h-48 bg-slate-900 flex items-center justify-center">
+                        <img src="input_file_10.png" alt="3D Manager Visual Character" class="w-full h-full object-cover hover:scale-105 transition duration-300" onerror="this.onerror=null; this.src='input_file_4.png';">
+                    </div>
+                    <div class="p-1 mt-2">
+                        <span class="text-xs font-bold text-purple-400 block">★ 감독 스토리 & 캐릭터 브랜드</span>
+                        <p class="text-xs text-slate-400 mt-1 leading-relaxed">구단 재건 스토리를 완성하는 감독 캐릭터 디자인과 감성적인 인게임 이벤트 연출로 리텐션 극대화.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5: INTERACTIVE INVESTOR ROI & FINANCIAL SCENARIO SIMULATOR -->
+    <section id="simulator" class="card ir-gradient p-6 md:p-8 border-indigo-500/40 shadow-2xl">
+        <div class="flex items-center gap-3 mb-6">
+            <span class="bg-indigo-600 text-white p-2.5 rounded-xl text-xl">📊</span>
+            <div>
+                <h3 class="text-2xl font-black text-white">풋볼 마에스트로 II 매출 포텐셜 & ROI 시뮬레이터</h3>
+                <p class="text-xs md:text-sm text-slate-300">투자자를 위한 실시간 시나리오 추정 도구: MAU, 결제율, ARPPU 슬라이더를 조절해 보세요.</p>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
+            <!-- Sliders Controls -->
+            <div class="lg:col-span-1 space-y-6 bg-slate-900/80 p-6 rounded-2xl border border-slate-800">
+                <div>
+                    <div class="flex justify-between text-xs font-semibold mb-2">
+                        <span class="text-slate-300">목표 MAU (월간 활성 유저수)</span>
+                        <span id="simMauVal" class="text-indigo-400 font-extrabold text-sm">300만 명</span>
+                    </div>
+                    <input type="range" id="simMau" min="50" max="500" step="10" value="300" class="w-full h-2 bg-slate-700 rounded-lg cursor-pointer" oninput="updateSimulation()">
+                    <div class="flex justify-between text-[10px] text-slate-500 mt-1">
+                        <span>50만 (시범)</span>
+                        <span>300만 (우수)</span>
+                        <span>500만 (카테고리 킬러)</span>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="flex justify-between text-xs font-semibold mb-2">
+                        <span class="text-slate-300">유저 결제 전환율 (Pay Rate)</span>
+                        <span id="simConversionVal" class="text-rose-400 font-extrabold text-sm">4.5%</span>
+                    </div>
+                    <input type="range" id="simConversion" min="2.0" max="6.0" step="0.1" value="4.5" class="w-full h-2 bg-slate-700 rounded-lg cursor-pointer" oninput="updateSimulation()">
+                    <div class="flex justify-between text-[10px] text-slate-500 mt-1">
+                        <span>2.0% (보수적)</span>
+                        <span>4.0% (Top Eleven급)</span>
+                        <span>6.0% (공격적)</span>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="flex justify-between text-xs font-semibold mb-2">
+                        <span class="text-slate-300">월간 ARPPU (결제 유저당 매출)</span>
+                        <span id="simArppuVal" class="text-emerald-400 font-extrabold text-sm">60,000 원</span>
+                    </div>
+                    <input type="range" id="simArppu" min="30000" max="80000" step="2500" value="60000" class="w-full h-2 bg-slate-700 rounded-lg cursor-pointer" oninput="updateSimulation()">
+                    <div class="flex justify-between text-[10px] text-slate-500 mt-1">
+                        <span>3.5만 원</span>
+                        <span>6.0만 원</span>
+                        <span>8.0만 원</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Simulation Output Displays -->
+            <div class="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div class="bg-slate-900/90 p-5 rounded-2xl border border-indigo-500/30">
+                    <span class="text-xs text-indigo-300 uppercase font-extrabold tracking-wider">추정 월 인앱 결제 매출 (IAP)</span>
+                    <p id="outMonthlyIap" class="text-3xl font-black text-indigo-400 mt-2">81.0억 원</p>
+                    <p class="text-xs text-slate-400 mt-1">결제 유저 <span id="outPayingUsers" class="text-slate-200 font-bold">13.5만 명</span> 기준</p>
+                </div>
+
+                <div class="bg-slate-900/90 p-5 rounded-2xl border border-purple-500/30">
+                    <span class="text-xs text-purple-300 uppercase font-extrabold tracking-wider">추정 월 보상형 광고 매출 (IAA)</span>
+                    <p id="outMonthlyIaa" class="text-3xl font-black text-purple-400 mt-2">9.0억 원</p>
+                    <p class="text-xs text-slate-400 mt-1">비과금 유저 인게임 eCPM 시청 기반</p>
+                </div>
+
+                <div class="bg-indigo-950/90 p-6 rounded-2xl border border-emerald-500/50 sm:col-span-2 flex flex-wrap justify-between items-center gap-4">
+                    <div>
+                        <span class="text-xs font-bold text-emerald-400 uppercase tracking-widest">총 추정 연간 매출액 (Annualized Revenue)</span>
+                        <h2 id="outAnnualTotal" class="text-4xl font-black text-white mt-1">1,080억 원</h2>
+                        <p class="text-xs text-emerald-300 mt-1">월 매출 <span id="outMonthlyTotal" class="font-bold">90.0억 원</span> (Top Eleven 시장의 약 30% 점유 시나리오)</p>
+                    </div>
+                    <div class="text-right">
+                        <span id="scenarioTag" class="inline-block bg-emerald-500 text-slate-950 font-black text-xs px-3.5 py-1.5 rounded-lg uppercase shadow-md">
+                            우수 목표 시나리오
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 6: CONTACT & DECK RESOURCES -->
+    <footer class="card ir-gradient p-8 text-center space-y-6 border-indigo-500/30 shadow-2xl">
+        <div class="max-w-3xl mx-auto space-y-3">
+            <span class="bg-indigo-600 text-white font-black text-xs px-3 py-1 rounded-md uppercase tracking-wider">FUNCLAVE INC.</span>
+            <h3 class="text-2xl md:text-3xl font-black text-white">"글로벌 축구 매니저 게임에 강력한 엔진을 달아주실 파트너를 모십니다."</h3>
+            <p class="text-slate-300 text-xs md:text-sm leading-relaxed">
+                풋볼 마에스트로 II는 검증된 매니지먼트 장르의 고수익성에 3D 캐주얼 감성과 스토리텔링을 결합하여 새로운 글로벌 시장을 열어갑니다.
+            </p>
+        </div>
+
+        <!-- Corrected Resource Links Grid -->
+        <div class="flex flex-wrap justify-center gap-3 text-xs font-semibold">
+            <a href="https://youtu.be/0hOwXCRKIQY" target="_blank" class="bg-slate-800 hover:bg-slate-700 text-indigo-300 py-2.5 px-4 rounded-xl border border-slate-700 transition flex items-center gap-2">
+                🎬 게임 플레이 스타일 영상
+            </a>
+            <a href="https://youtu.be/6oPUz0rW6tM" target="_blank" class="bg-slate-800 hover:bg-slate-700 text-indigo-300 py-2.5 px-4 rounded-xl border border-slate-700 transition flex items-center gap-2">
+                ⚽ 경기장 & 경기 연출 영상
+            </a>
+            <a href="https://www.figma.com/design/mWYxmnIbJECbeAzYatkTfh/FM2-Preview?node-id=0-1&p=f" target="_blank" class="bg-slate-800 hover:bg-slate-700 text-indigo-300 py-2.5 px-4 rounded-xl border border-slate-700 transition flex items-center gap-2">
+                🎨 Figma UI 프리뷰
+            </a>
+            <a href="https://drive.google.com/file/d/1d30HhrdIsAf-MHuAKy_5S-nr1QdAG3AG/view?usp=sharing" target="_blank" class="bg-slate-800 hover:bg-slate-700 text-indigo-300 py-2.5 px-4 rounded-xl border border-slate-700 transition flex items-center gap-2">
+                📖 스토리 기획 자료
+            </a>
+            <a href="mailto:biz@funclave.net" class="bg-indigo-600 hover:bg-indigo-500 text-white py-2.5 px-6 rounded-xl shadow-lg transition flex items-center gap-2">
+                ✉️ IR 미팅 및 제안 문의 (biz@funclave.net)
+            </a>
+        </div>
+
+        <p class="text-slate-500 text-[11px] pt-2">© 2026 FUNCLAVE Inc. All Rights Reserved. Confidential IR Executive Proposal.</p>
+    </footer>
+</div>
+
+<script>
+    // ROI Simulator Logic
+    function updateSimulation() {
+        const mau = parseFloat(document.getElementById('simMau').value); // In 10k units (e.g. 300 = 3,000,000)
+        const conversion = parseFloat(document.getElementById('simConversion').value); // Percent
+        const arppu = parseFloat(document.getElementById('simArppu').value); // KRW
+
+        document.getElementById('simMauVal').textContent = (mau / 100).toFixed(1) + '백만 명';
+        document.getElementById('simConversionVal').textContent = conversion.toFixed(1) + '%';
+        document.getElementById('simArppuVal').textContent = (arppu / 10000).toFixed(1) + '만 원';
+
+        const totalMau = mau * 10000;
+        const payingUsers = totalMau * (conversion / 100);
+        const monthlyIapKrw = payingUsers * arppu;
+        
+        // IAA calculation: Non-paying users * ~320 KRW avg monthly ad view value
+        const nonPayingUsers = totalMau - payingUsers;
+        const monthlyIaaKrw = nonPayingUsers * 320;
+
+        const monthlyTotalKrw = monthlyIapKrw + monthlyIaaKrw;
+        const annualTotalKrw = monthlyTotalKrw * 12;
+
+        document.getElementById('outPayingUsers').textContent = (payingUsers / 10000).toFixed(1) + '백만 명';
+        document.getElementById('outMonthlyIap').textContent = (monthlyIapKrw / 100000000).toFixed(1) + '억 원';
+        document.getElementById('outMonthlyIaa').textContent = (monthlyIaaKrw / 100000000).toFixed(1) + '억 원';
+        document.getElementById('outMonthlyTotal').textContent = (monthlyTotalKrw / 100000000).toFixed(1) + '억 원';
+        document.getElementById('outAnnualTotal').textContent = Math.round(annualTotalKrw / 100000000).toLocaleString() + '억 원';
+
+        const tagEl = document.getElementById('scenarioTag');
+        if (annualTotalKrw >= 150000000000) {
+            tagEl.textContent = '🔥 카테고리 킬러 시나리오';
+            tagEl.className = 'inline-block bg-purple-500 text-white font-black text-xs px-3.5 py-1.5 rounded-lg uppercase shadow-md';
+        } else if (annualTotalKrw >= 80000000000) {
+            tagEl.textContent = '🚀 우수 목표 시나리오';
+            tagEl.className = 'inline-block bg-emerald-500 text-slate-950 font-black text-xs px-3.5 py-1.5 rounded-lg uppercase shadow-md';
+        } else {
+            tagEl.textContent = '🛡️ 보수적 시나리오';
+            tagEl.className = 'inline-block bg-amber-500 text-slate-950 font-black text-xs px-3.5 py-1.5 rounded-lg uppercase shadow-md';
+        }
+    }
+
+    // Initialize Charts on Page Load
+    window.onload = function() {
+        updateSimulation();
+
+        // 1. Platform Share Chart
+        const platformCtx = document.getElementById('footballPlatformChart').getContext('2d');
+        new Chart(platformCtx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Console ($3.4B)', 'Mobile ($2.6B)', 'PC & Online ($2.0B)'],
+                datasets: [{
+                    data: [42.5, 32.5, 25.0],
+                    backgroundColor: ['#6366f1', '#ec4899', '#f59e0b'],
+                    borderWidth: 0
+                }]
+            },
+            options: {
+                maintainAspectRatio: false,
+                responsive: true,
+                cutout: '70%',
+                plugins: {
+                    legend: { position: 'bottom', labels: { color: '#94a3b8', font: { size: 11 } } }
+                }
+            }
+        });
+
+        // 2. Mobile Football Genre Share Chart
+        const genreCtx = document.getElementById('footballGenreChart').getContext('2d');
+        new Chart(genreCtx, {
+            type: 'pie',
+            data: {
+                labels: ['액션 시뮬레이션 (63%)', '매니지먼트 (22%)', '캐주얼/아케이드 (12%)', '기타 (3%)'],
+                datasets: [{
+                    data: [63, 22, 12, 3],
+                    backgroundColor: ['#6366f1', '#ec4899', '#f59e0b', '#64748b'],
+                    borderWidth: 0
+                }]
+            },
+            options: {
+                maintainAspectRatio: false,
+                responsive: true,
+                plugins: {
+                    legend: { position: 'bottom', labels: { color: '#94a3b8', font: { size: 11 } } }
+                }
+            }
+        });
+
+        // 3. Top Football Titles Revenue 2025 Chart
+        const revenueCtx = document.getElementById('footballRevenue2025Chart').getContext('2d');
+        new Chart(revenueCtx, {
+            type: 'bar',
+            data: {
+                labels: ['EA FC (콘솔/PC)', 'FC Online (넥슨)', 'FC Mobile', 'eFootball', 'Top Eleven (노르데우스)', 'FM 시리즈'],
+                datasets: [{
+                    label: '2025년 매출 ($M)',
+                    data: [3350, 510, 480, 410, 105, 150],
+                    backgroundColor: ['#6366f1', '#ec4899', '#a855f7', '#3b82f6', '#f59e0b', '#10b981'],
+                    borderRadius: 6
+                }]
+            },
+            options: {
+                maintainAspectRatio: false,
+                responsive: true,
+                plugins: { legend: { display: false } },
+                scales: {
+                    y: { beginAtZero: true, grid: { color: '#1e293b' }, ticks: { color: '#94a3b8', callback: v => '$' + v + 'M' } },
+                    x: { grid: { display: false }, ticks: { color: '#f8fafc', font: { size: 10 } } }
+                }
+            }
+        });
+    };
+</script>
+</body>
+</html>
