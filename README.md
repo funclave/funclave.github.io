@@ -1,2 +1,0 @@
-# funclave
-public access files
