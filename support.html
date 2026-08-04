@@ -1,0 +1,663 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Football Maestro Mini support — find quick answers, troubleshooting help, and contact FunClave to report a bug or ask a question.">
+    <meta name="theme-color" content="#0877e8">
+    <link rel="icon" href="img/fm-mini/app-icon.png" type="image/png">
+    <title>Football Maestro Mini Support | FunClave</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,700;0,800;0,900;1,700;1,800;1,900&family=Inter:wght@400;500;600;700;800&display=swap");
+
+      :root {
+        --blue: #0877e8;
+        --blue-dark: #005ac8;
+        --sky: #eef8ff;
+        --green: #b8f229;
+        --green-dark: #78b500;
+        --navy: #07172e;
+        --ink: #10233d;
+        --muted: #5f7085;
+        --white: #fff;
+        --line: rgba(16, 35, 61, 0.14);
+        --page: clamp(22px, 5vw, 78px);
+        --max: 1180px;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        overflow-x: hidden;
+        background: #fff;
+        color: var(--ink);
+        font-family: "Inter", Arial, sans-serif;
+        line-height: 1.55;
+      }
+
+      img {
+        max-width: 100%;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      h1,
+      h2,
+      h3,
+      p {
+        margin-top: 0;
+      }
+
+      a:focus-visible,
+      summary:focus-visible {
+        outline: 3px solid var(--green);
+        outline-offset: 4px;
+      }
+
+      .site-header {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 20;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 84px;
+        padding: 12px var(--page);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.26);
+        color: #fff;
+      }
+
+      .brand img {
+        display: block;
+        width: 118px;
+        filter: brightness(0) invert(1);
+      }
+
+      .back-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 11px 17px;
+        border: 1px solid rgba(255, 255, 255, 0.52);
+        border-radius: 5px;
+        font-family: "Barlow Condensed", sans-serif;
+        font-size: 14px;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        transition: border-color 180ms ease, background 180ms ease, color 180ms ease;
+      }
+
+      .back-link::before {
+        content: "←";
+        font-size: 18px;
+      }
+
+      .back-link:hover,
+      .back-link:focus-visible {
+        border-color: var(--green);
+        background: var(--green);
+        color: var(--navy);
+      }
+
+      .support-hero {
+        position: relative;
+        min-height: 650px;
+        overflow: hidden;
+        background:
+          radial-gradient(circle at 79% 40%, rgba(91, 200, 255, 0.6), transparent 33%),
+          linear-gradient(125deg, #0055b9 0%, #0877e8 54%, #20a8ef 100%);
+        color: #fff;
+      }
+
+      .support-hero::before {
+        position: absolute;
+        right: -140px;
+        bottom: -270px;
+        width: 650px;
+        height: 650px;
+        border: 110px solid rgba(184, 242, 41, 0.13);
+        border-radius: 50%;
+        content: "";
+      }
+
+      .support-hero::after {
+        position: absolute;
+        top: 145px;
+        right: max(var(--page), calc((100vw - var(--max)) / 2));
+        width: clamp(230px, 28vw, 390px);
+        aspect-ratio: 333 / 592;
+        border: 8px solid #102039;
+        border-radius: 32px;
+        content: "";
+        background: url("img/fm-mini/screen-01.png") center / cover no-repeat;
+        box-shadow: 0 34px 60px rgba(0, 47, 109, 0.36);
+        opacity: 0.38;
+        transform: rotate(9deg);
+      }
+
+      .hero-inner {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        width: min(var(--max), calc(100% - 2 * var(--page)));
+        min-height: 650px;
+        margin: 0 auto;
+        padding: 140px 0 90px;
+      }
+
+      .hero-copy {
+        max-width: 760px;
+      }
+
+      .app-line {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        margin-bottom: 27px;
+        font-family: "Barlow Condensed", sans-serif;
+        font-size: 15px;
+        font-weight: 800;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+      }
+
+      .app-line img {
+        width: 54px;
+        height: 54px;
+        border: 2px solid rgba(255, 255, 255, 0.72);
+        border-radius: 13px;
+        box-shadow: 0 10px 26px rgba(2, 43, 104, 0.25);
+      }
+
+      .support-hero h1 {
+        margin-bottom: 22px;
+        font-family: "Barlow Condensed", sans-serif;
+        font-size: clamp(70px, 8.4vw, 124px);
+        font-style: italic;
+        font-weight: 900;
+        line-height: 0.82;
+        letter-spacing: -0.045em;
+        text-transform: uppercase;
+        text-shadow: 0 7px 0 rgba(0, 45, 115, 0.19);
+      }
+
+      .support-hero h1 span {
+        display: block;
+        color: var(--green);
+      }
+
+      .hero-lead {
+        max-width: 610px;
+        margin-bottom: 31px;
+        color: rgba(255, 255, 255, 0.88);
+        font-size: clamp(18px, 1.8vw, 23px);
+        font-weight: 600;
+      }
+
+      .primary-button,
+      .secondary-button {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 56px;
+        padding: 0 24px;
+        border-radius: 5px;
+        font-family: "Barlow Condensed", sans-serif;
+        font-size: 16px;
+        font-weight: 800;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        transition: box-shadow 180ms ease, transform 180ms ease;
+      }
+
+      .primary-button {
+        gap: 11px;
+        background: var(--green);
+        color: var(--navy);
+        box-shadow: 0 12px 25px rgba(44, 91, 0, 0.22);
+      }
+
+      .primary-button::after {
+        content: "↗";
+        font-size: 20px;
+      }
+
+      .primary-button:hover,
+      .primary-button:focus-visible,
+      .secondary-button:hover,
+      .secondary-button:focus-visible {
+        box-shadow: 0 16px 30px rgba(4, 35, 77, 0.2);
+        transform: translateY(-3px);
+      }
+
+      .content-inner {
+        max-width: var(--max);
+        margin: 0 auto;
+      }
+
+      .section-label {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 20px;
+        color: var(--blue);
+        font-family: "Barlow Condensed", sans-serif;
+        font-size: 14px;
+        font-weight: 800;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+      }
+
+      .section-label::before {
+        width: 36px;
+        height: 4px;
+        content: "";
+        background: var(--green-dark);
+      }
+
+      .section-heading {
+        margin-bottom: 22px;
+        font-family: "Barlow Condensed", sans-serif;
+        font-size: clamp(48px, 5.8vw, 78px);
+        font-style: italic;
+        font-weight: 900;
+        line-height: 0.92;
+        letter-spacing: -0.035em;
+        text-transform: uppercase;
+      }
+
+      .section-intro {
+        max-width: 680px;
+        margin-bottom: 48px;
+        color: var(--muted);
+        font-size: 18px;
+      }
+
+      .faq {
+        padding: clamp(85px, 10vw, 135px) var(--page);
+        background: var(--navy);
+        color: #fff;
+      }
+
+      .faq .section-label {
+        color: var(--green);
+      }
+
+      .faq .section-intro {
+        color: #a7b7cb;
+      }
+
+      .faq-list {
+        max-width: 900px;
+        border-top: 1px solid rgba(255, 255, 255, 0.17);
+      }
+
+      details {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.17);
+      }
+
+      summary {
+        position: relative;
+        padding: 26px 55px 26px 0;
+        cursor: pointer;
+        font-family: "Barlow Condensed", sans-serif;
+        font-size: clamp(22px, 2.5vw, 30px);
+        font-weight: 800;
+        line-height: 1.15;
+        list-style: none;
+        text-transform: uppercase;
+      }
+
+      summary::-webkit-details-marker {
+        display: none;
+      }
+
+      summary::after {
+        position: absolute;
+        top: 50%;
+        right: 5px;
+        color: var(--green);
+        content: "+";
+        font-size: 32px;
+        transform: translateY(-50%);
+      }
+
+      details[open] summary::after {
+        content: "−";
+      }
+
+      .answer {
+        max-width: 780px;
+        padding: 0 40px 26px 0;
+        color: #a7b7cb;
+      }
+
+      .answer p:last-child,
+      .answer ul:last-child {
+        margin-bottom: 0;
+      }
+
+      .answer ul {
+        padding-left: 20px;
+      }
+
+      .answer a {
+        color: var(--green);
+        text-decoration: underline;
+        text-underline-offset: 3px;
+      }
+
+      .contact {
+        position: relative;
+        padding: clamp(85px, 10vw, 135px) var(--page);
+        overflow: hidden;
+        background: var(--sky);
+      }
+
+      .contact::after {
+        position: absolute;
+        right: -160px;
+        bottom: -240px;
+        width: 520px;
+        height: 520px;
+        border: 90px solid rgba(8, 119, 232, 0.08);
+        border-radius: 50%;
+        content: "";
+      }
+
+      .contact-panel {
+        position: relative;
+        z-index: 1;
+        display: grid;
+        grid-template-columns: 1.25fr 0.75fr;
+        gap: clamp(38px, 7vw, 90px);
+        align-items: center;
+        padding: clamp(35px, 6vw, 70px);
+        border-radius: 18px;
+        background: #fff;
+        box-shadow: 0 24px 55px rgba(14, 49, 89, 0.12);
+      }
+
+      .contact-panel .section-heading {
+        margin-bottom: 20px;
+      }
+
+      .contact-copy > p:not(.section-label) {
+        max-width: 620px;
+        margin-bottom: 17px;
+        color: var(--muted);
+      }
+
+      .contact-note {
+        font-size: 13px;
+      }
+
+      .contact-actions {
+        display: flex;
+        flex-direction: column;
+        gap: 13px;
+      }
+
+      .secondary-button {
+        border: 2px solid var(--ink);
+        color: var(--ink);
+      }
+
+      .legal-footer {
+        padding: 42px var(--page) 34px;
+        background: #050f20;
+        color: #76889f;
+        font-size: 13px;
+      }
+
+      .footer-inner {
+        max-width: var(--max);
+        margin: 0 auto;
+      }
+
+      .footer-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 11px 0;
+        margin: 0 0 28px;
+        padding: 0;
+        list-style: none;
+      }
+
+      .footer-links li {
+        display: flex;
+        align-items: center;
+      }
+
+      .footer-links li:not(:last-child)::after {
+        width: 1px;
+        height: 12px;
+        margin: 0 16px;
+        content: "";
+        background: #344357;
+      }
+
+      .footer-links a {
+        color: #c6d1de;
+        font-weight: 600;
+      }
+
+      .footer-links a:hover,
+      .footer-links a:focus-visible {
+        color: var(--green);
+      }
+
+      .footer-links .support-link {
+        color: #fff;
+        font-weight: 800;
+      }
+
+      .footer-bottom {
+        display: flex;
+        align-items: end;
+        justify-content: space-between;
+        gap: 32px;
+        padding-top: 25px;
+        border-top: 1px solid #253449;
+      }
+
+      .footer-bottom img {
+        width: 98px;
+        filter: brightness(0) invert(1);
+        opacity: 0.9;
+      }
+
+      .footer-bottom p {
+        margin: 0;
+        text-align: right;
+      }
+
+      @media (max-width: 850px) {
+        .support-hero::after {
+          right: -40px;
+          opacity: 0.2;
+        }
+
+        .contact-panel {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      @media (max-width: 600px) {
+        .site-header {
+          min-height: 72px;
+        }
+
+        .brand img {
+          width: 102px;
+        }
+
+        .back-link {
+          padding: 9px 12px;
+          font-size: 12px;
+        }
+
+        .support-hero,
+        .hero-inner {
+          min-height: 610px;
+        }
+
+        .hero-inner {
+          width: calc(100% - 44px);
+          padding-top: 120px;
+        }
+
+        .support-hero h1 {
+          font-size: clamp(65px, 21vw, 88px);
+        }
+
+        .app-line {
+          font-size: 12px;
+        }
+
+        .contact-panel {
+          padding: 30px 23px;
+        }
+
+        .footer-links li:not(:last-child)::after {
+          margin: 0 10px;
+        }
+
+        .footer-bottom {
+          align-items: flex-start;
+          flex-direction: column;
+        }
+
+        .footer-bottom p {
+          text-align: left;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+
+        *,
+        *::before,
+        *::after {
+          transition-duration: 0.01ms !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="FunClave home">
+        <img src="img/ci-transparent.png" alt="FunClave">
+      </a>
+      <a class="back-link" href="index.html">Back to Game</a>
+    </header>
+
+    <main>
+      <section class="support-hero">
+        <div class="hero-inner">
+          <div class="hero-copy">
+            <p class="app-line">
+              <img src="img/fm-mini/app-icon.png" alt="">
+              <span>Football Maestro Mini / Player Support</span>
+            </p>
+            <h1>Need a hand?<span>We’re on it.</span></h1>
+            <p class="hero-lead">Find quick answers below or send the FunClave team a bug report, question, or support request.</p>
+            <a class="primary-button" href="https://docs.google.com/forms/d/e/1FAIpQLScfcbHO2fU2WvpXtY5imLLLGnmwAVnDz6t0ya-MoofcWq4avQ/viewform?usp=dialog" target="_blank" rel="noopener noreferrer">Contact Support</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="faq" aria-labelledby="faq-title">
+        <div class="content-inner">
+          <p class="section-label">Quick Answers</p>
+          <h2 class="section-heading" id="faq-title">Player help.</h2>
+          <p class="section-intro">Try these steps first. If the issue continues, send us a report and we’ll take a closer look.</p>
+
+          <div class="faq-list">
+            <details>
+              <summary>The game is not starting or has stopped responding.</summary>
+              <div class="answer">
+                <p>Close and reopen the game, restart your device, and confirm that both your operating system and Football Maestro Mini are up to date. Make sure your device also has enough free storage. If the problem continues, contact us with your device and game-version details.</p>
+              </div>
+            </details>
+            <details>
+              <summary>Can I play without an internet connection?</summary>
+              <div class="answer">
+                <p>Football Maestro Mini supports offline play. Some store, update, advertising, or support functions may still require an internet connection.</p>
+              </div>
+            </details>
+            <details>
+              <summary>My progress looks wrong or is missing.</summary>
+              <div class="answer">
+                <p>Do not uninstall the game or clear its app data while progress is missing, as this may remove information useful for recovery. Send us a support request with your device, game version, player or support ID, and a description of when the issue began.</p>
+              </div>
+            </details>
+            <details>
+              <summary>I have a question about a purchase.</summary>
+              <div class="answer">
+                <p>Check the purchase history for the Google Play or App Store account used at checkout. If an item is missing or a charge looks incorrect, send us the store receipt or order number through the support form. Do not include passwords or full payment-card details.</p>
+              </div>
+            </details>
+            <details>
+              <summary>Where can I read the Privacy Policy and Terms?</summary>
+              <div class="answer">
+                <p>You can review the current <a href="privacy.html">Privacy Policy and Terms of Service</a> on our website.</p>
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact" aria-labelledby="contact-title">
+        <div class="content-inner">
+          <div class="contact-panel">
+            <div class="contact-copy">
+              <p class="section-label">Still Need Help?</p>
+              <h2 class="section-heading" id="contact-title">Talk to the team.</h2>
+              <p>Use our support form to report a bug, ask a question, or tell us where you need help. The form opens securely in Google Forms.</p>
+              <p class="contact-note">Please avoid sharing passwords, full payment-card numbers, or other sensitive personal information.</p>
+            </div>
+            <div class="contact-actions">
+              <a class="primary-button" href="https://docs.google.com/forms/d/e/1FAIpQLScfcbHO2fU2WvpXtY5imLLLGnmwAVnDz6t0ya-MoofcWq4avQ/viewform?usp=dialog" target="_blank" rel="noopener noreferrer">Open Support Form</a>
+              <a class="secondary-button" href="mailto:cs@funclave.net">Email Support</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="legal-footer">
+      <div class="footer-inner">
+        <nav aria-label="Footer navigation">
+          <ul class="footer-links">
+            <li><a href="index.html">FunClave</a></li>
+            <li><a href="index.html#football-maestro-mini">Football Maestro Mini</a></li>
+            <li><a class="support-link" href="support.html" aria-current="page">Player Support</a></li>
+            <li><a href="privacy.html">Privacy Policy &amp; Terms of Service</a></li>
+          </ul>
+        </nav>
+
+        <div class="footer-bottom">
+          <img src="img/ci-transparent.png" alt="FunClave">
+          <p>© 2026 FunClave Inc. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
